@@ -27,7 +27,7 @@ class TestApplicationTests {
     private UserMapper userMapper;
     @Test
     void mapperTest(){
-        System.out.println(userMapper.selectAll());
+        System.out.println(userDao.selectAll());
 
     }
 

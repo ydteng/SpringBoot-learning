@@ -2,7 +2,7 @@
 spring:
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/srt_crm
+        url: jdbc:mysql://localhost:3306/test
         username: root
         password: root
 
@@ -19,7 +19,6 @@ mybatis-plus:
             id-type: auto
     configuration:
         log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    type-aliases-package: test.domain
+    type-aliases-package: com.test.domain
     mapper-locations: classpath:/mappers/*.xml
-
 
