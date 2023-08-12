@@ -5,7 +5,9 @@ spring:
         url: jdbc:mysql://localhost:3306/test
         username: root
         password: root
-
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
 
 #spring:
 #    datasource:
@@ -21,4 +23,3 @@ mybatis-plus:
         log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     type-aliases-package: com.test.domain
     mapper-locations: classpath:/mappers/*.xml
-

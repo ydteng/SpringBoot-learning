@@ -30,4 +30,8 @@ public class UserController {
             return new R(userService.getUserById(5),"数据库");
         }
     }
+    @GetMapping("getall")
+    public List<UserInfo> getAll(){
+        return userService.getAll();
+    }
 }

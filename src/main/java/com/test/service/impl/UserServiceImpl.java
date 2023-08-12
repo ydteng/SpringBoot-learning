@@ -15,7 +15,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserInfo> getAll() {
-        return null;
+        return userDao.selectAll();
     }
 
     @Override

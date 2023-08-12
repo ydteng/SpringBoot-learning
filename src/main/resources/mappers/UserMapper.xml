@@ -4,6 +4,6 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.test.dao.UserDao">
     <select id="selectAll" resultType="UserInfo">
-        select * from user_info where id = 1
+        select * from user_info
     </select>
 </mapper>

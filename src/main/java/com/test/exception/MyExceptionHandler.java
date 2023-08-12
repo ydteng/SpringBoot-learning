@@ -1,5 +1,7 @@
 package com.test.exception;
 
+import org.springframework.http.HttpStatus;
+
 public class MyExceptionHandler extends RuntimeException{
     private Integer code ;
     private Boolean status;
@@ -25,6 +27,7 @@ public class MyExceptionHandler extends RuntimeException{
         this.status = status;
         this.msg = msg;
     }
+
 
     public Integer getCode() {
         return code;
