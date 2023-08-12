@@ -11,6 +11,7 @@ public class GlobalExceptionHandler {
     public R systemException(Exception e){
         e.printStackTrace();
         System.out.println("==================================>>"+e.getMessage()+"=================================");
+        System.out.println("www");
         return new R(false,null,"系统内部异常，请联系管理员");
     }
 

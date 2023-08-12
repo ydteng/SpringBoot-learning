@@ -2,7 +2,6 @@ package com.test;
 
 import com.test.dao.UserDao;
 import com.test.domain.UserInfo;
-import com.test.mapper.UserMapper;
 import com.test.service.UserService;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -25,7 +24,6 @@ class TestApplicationTests {
     @Autowired
     private UserDao userDao;
     @Autowired
-    private UserMapper userMapper;
     @Test
     void mapperTest(){
         System.out.println(userDao.selectAll());
@@ -39,7 +37,6 @@ class TestApplicationTests {
     }
     @Test
     void tempTest(){
-        System.out.println(userMapper.selectAll());
     }
 
 }
