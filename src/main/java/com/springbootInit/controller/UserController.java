@@ -1,11 +1,11 @@
-package com.test.controller;
+package com.springbootInit.controller;
 
-import com.test.domain.UserInfo;
-import com.test.dto.GetAll.UserPageQueryDto;
-import com.test.exception.ExceptionEnum;
-import com.test.exception.MyExceptionHandler;
-import com.test.exception.R;
-import com.test.service.UserService;
+import com.springbootInit.domain.UserInfo;
+import com.springbootInit.dto.GetAll.UserPageQueryDto;
+import com.springbootInit.exception.ExceptionEnum;
+import com.springbootInit.exception.MyExceptionHandler;
+import com.springbootInit.exception.R;
+import com.springbootInit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +19,10 @@ public class UserController {
     private UserService userService;
     @GetMapping("/{id}")
     public R getUserById(@Validated @ModelAttribute UserPageQueryDto userPageQueryDto){
-        Integer id = userPageQueryDto.getId();
-        return new R(id.toString());
+        if (true){
+            throw new MyExceptionHandler(ExceptionEnum.INTERNAL_SERVER_ERROR);
+        }
+        return null;
 
     }
     @GetMapping("getall")

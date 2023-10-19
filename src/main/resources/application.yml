@@ -21,5 +21,5 @@ mybatis-plus:
             id-type: auto
     configuration:
         log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    type-aliases-package: com.test.domain
+    type-aliases-package: com.springbootInit.domain
     mapper-locations: classpath:/mappers/*.xml

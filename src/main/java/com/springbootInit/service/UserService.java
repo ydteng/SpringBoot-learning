@@ -1,6 +1,6 @@
-package com.test.service;
+package com.springbootInit.service;
 
-import com.test.domain.UserInfo;
+import com.springbootInit.domain.UserInfo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

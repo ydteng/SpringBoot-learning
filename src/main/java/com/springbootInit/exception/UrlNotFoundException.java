@@ -1,4 +1,4 @@
-package com.test.exception;
+package com.springbootInit.exception;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;

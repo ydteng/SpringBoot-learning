@@ -1,8 +1,8 @@
-package com.test.service.impl;
+package com.springbootInit.service.impl;
 
-import com.test.dao.UserDao;
-import com.test.domain.UserInfo;
-import com.test.service.UserService;
+import com.springbootInit.dao.UserDao;
+import com.springbootInit.domain.UserInfo;
+import com.springbootInit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.test.domain;
+package com.springbootInit.domain;
 
 import lombok.Data;
 
@@ -7,4 +7,5 @@ public class UserInfo {
     private Integer id;
     private String name;
     private String password;
+
 }

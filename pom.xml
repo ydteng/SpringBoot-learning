@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>test</artifactId>
+    <artifactId>SpringbootInit</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>test</name>
-    <description>test</description>
+    <name>SpringbootInit</name>
+    <description>SpringbootInit</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -30,15 +30,12 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!--mybatis-plus-join数据库相关-->
         <dependency>
@@ -73,6 +70,13 @@
             <artifactId>spring-boot-starter-validation</artifactId>
             <version>3.1.2</version>
         </dependency>
+        <!--实体类复制-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.5.5.Final</version>
+        </dependency>
+
 
 
 
@@ -83,6 +87,30 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!--由于MapStruct在编译时工作，并且会集成到像Maven和Gradle这样的构建工具上，
+            我们还必须在<build中/>标签中添加一个插件maven-compiler-plugin，并在其配置中添加annotationProcessorPaths，
+            该插件会在构建时生成对应的代码。-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source> <!-- depending on your project -->
+                    <target>1.8</target> <!-- depending on your project -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>1.5.5.Final</version>
+                        </path>
+                        <!-- other annotation processors -->
+                    </annotationProcessorPaths>
+                </configuration>
             </plugin>
         </plugins>
     </build>
